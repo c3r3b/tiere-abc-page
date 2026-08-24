@@ -1,0 +1,143 @@
+:root {
+  --bg:      #fdfbf7;
+  --fg:      #241f1a;
+  --muted:   #6d655b;
+  --accent:  #b4541a;
+  --border:  #e9e1d5;
+  --panel:   #ffffff;
+  --todo-bg: #fff4d1;
+  --todo-fg: #7a5600;
+  --todo-br: #e8c469;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:      #191714;
+    --fg:      #eae5dd;
+    --muted:   #a49b8e;
+    --accent:  #f0955a;
+    --border:  #332e28;
+    --panel:   #211e1a;
+    --todo-bg: #3a2f14;
+    --todo-fg: #f5cf7a;
+    --todo-br: #6b5622;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+header.site {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.appname {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  margin: 0 0 0.15rem;
+}
+
+.appname span { font-style: normal; }
+
+h1 {
+  font-size: 1.7rem;
+  line-height: 1.25;
+  margin: 0.2rem 0 0.4rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.2rem 0 0.6rem;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  font-size: 1rem;
+  margin: 1.4rem 0 0.3rem;
+}
+
+p, ul, ol { margin: 0.7rem 0; }
+
+ul, ol { padding-left: 1.3rem; }
+
+li { margin: 0.35rem 0; }
+
+a { color: var(--accent); }
+
+a:hover { text-decoration: none; }
+
+.lede {
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  margin: 1rem 0;
+}
+
+.card p:first-child { margin-top: 0; }
+.card p:last-child  { margin-bottom: 0; }
+
+address {
+  font-style: normal;
+  line-height: 1.75;
+}
+
+.todo {
+  background: var(--todo-bg);
+  color: var(--todo-fg);
+  border: 1px dashed var(--todo-br);
+  border-radius: 5px;
+  padding: 0.05em 0.4em;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+footer.site {
+  margin-top: 3rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  justify-content: space-between;
+}
+
+@media (max-width: 30rem) {
+  body { font-size: 16px; }
+  .wrap { padding: 1.5rem 1rem 3rem; }
+  h1 { font-size: 1.45rem; }
+}
